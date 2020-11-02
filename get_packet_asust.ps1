@@ -1,13 +1,41 @@
+<#
+    .SYNOPSIS
+     Get packet from internal support site ĞĞĞ "ĞĞ¢Ğ¦ Ğ¢Ğ ĞĞĞ¡Ğ¡Ğ˜Ğ¡Ğ¢Ğ•ĞœĞĞ¢Ğ•Ğ¥ĞĞ˜ĞšĞ"
+
+     Author: Dmitry Demin dmitrydemin1973@gmail.com
+
+    .DESCRIPTION
+    Get packet from internal support site, create directory D:\Region\updates\2020_11_02\14534 and zip archive check.
+
+    .PARAMETER packet
+    Specify the packet for dowload. 
+
+    .PARAMETER dir_patches
+    Specify the directory for packet. 
+
+    .PARAMETER userasustsite
+    Specify the name of user asust site. 
+
+    .PARAMETER passasustsite
+    Specify the password of user asust site. 
+
+    .EXAMPLE
+    Get packet 14534 and save to directory D:\Region\updates\2020_11_02\14534\ 
+    .\get_packet_asust.ps1 -packet 14534 -dir_patches  D:\Region\updates\ -userasustsite user_name  -passasustsite password
+#>
+
+
 param(
-[string]$patch_input_in = "14534", 
+[string]$packet = "14534", 
 [string]$dir_patches = "D:\Region\updates\",
 [string]$userasustsite = "",
 [string]$passasustsite = ""
 )
 
 
-#$dir_patches = "C:\ÀÑÓ\Îáíîâëåíèÿ\ÀÑÓ ÑÒ\updates\"
 
+
+$patch_input_in=$packet
 $urlsiteroot="http://10.161.98.7:8080/"
 $url_site=$urlsiteroot+"seePO.do?id="
 $url_relese="href=/ReleaseDir/"
