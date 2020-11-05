@@ -15,7 +15,7 @@
   
   Для работы требует установленный архиватор 7z.exe в директорию "C:\Program Files\7-Zip\7z.exe"
 
-  Скомпилированный скрипт get_packet_asust.ps1 не требует разрешения на запуск powershell скриптов.
+  Скомпилированный скрипт get_packet_asust.exe не требует разрешения на запуск powershell скриптов.
 
 **.PARAMETER packet**
 
