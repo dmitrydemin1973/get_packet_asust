@@ -13,7 +13,7 @@
   
   Скаченные пакеты проверяются на целостность архива.
   
-  Для работы требует установленный 
+  Для работы требует установленный архиватор 7z.exe в директорию "C:\Program Files\7-Zip\7z.exe"
 
   Скомпилированный скрипт get_packet_asust.ps1 не требует разрешения на запуск powershell скриптов.
 
@@ -45,38 +45,47 @@
 
 # get_packet_asust.ps1 powershell script 
 
-Get packet from site ASUST-TST-SUPPORT 
-
 **.SYNOPSIS**
 
-   Get packet from internal support site ООО "НТЦ ТРАНССИСТЕМОТЕХНИКА"
+   Скачивание пакетов обновлений с сайта тех. поддержки ООО "НТЦ ТРАНССИСТЕМОТЕХНИКА"
 
    Author: Dmitry Demin dmitrydemin1973@gmail.com
 
 **.DESCRIPTION**
 
-  Get packet from internal support site, create directory D:\Region\updates\2020_11_02\14534 and zip archive check.
+  Скачивание пакетов обновлений, скриптов sql и всех документов входящих в обновление, с сайта тех. поддержки ООО "НТЦ ТРАНССИСТЕМОТЕХНИКА".
+  
+  Скаченные пакеты проверяются на целостность архива.
+  
+  Для работы требует установленный архиватор 7z.exe в директорию "C:\Program Files\7-Zip\7z.exe"
+
+  Скрипт get_packet_asust.ps1 **требует разрешения на запуск powershell скриптов.**
+  
+  Для изменения политики выполнения на неограниченную, надо воспользоваться консолью PowerShell, открытую с правами Администратора и выполнить следующую команду:
+
+      Set-ExecutionPolicy Unrestricted
 
 **.PARAMETER packet**
 
-  Specify the packet for dowload. 
+  Номер пакета АСУ СТ 
 
 **.PARAMETER dir_patches**
 
- Specify the directory for packet. 
+ Корневая директория для скачивания пакетов. Структура директорий dir_patches\<YYYY-MM-DD>\<номер пакета>
+ 
+ В случае существования директории и ранее скаченных файлов, старая директория копируется в директорию  dir_patches\<YYYY-MM-DD>\<номер пакета YYYY-MM-DD>
 
 **.PARAMETER userasustsite**
 
-  Specify the name of user asust site. 
+ Имя пользователя сайта тех.поддержки АСУ СТ.
 
 **.PARAMETER passasustsite**
 
-  Specify the password of user asust site. 
+  Пароль пользователя сайта тех.поддержки АСУ СТ.
 
 **.EXAMPLE**
 
-  Get packet 14534 and save to directory D:\Region\updates\2020_11_02\14534\ 
+  Скачивание пакета 14534 и сохранение в директорию D:\Region\updates\2020_11_02\14534\ 
 
-    .\get_packet_asust.ps1 -packet 14534 -dir_patches  D:\Region\updates\ -userasustsite user_name  -passasustsite password
-
+     powershell .\get_packet_asust.ps1 -packet 14534 -dir_patches  D:\Region\updates\ -userasustsite user_name  -passasustsite password
 
