@@ -1,3 +1,48 @@
+# get_packet_asust_exe.bat
+
+**.SYNOPSIS**
+
+   Упрощение запуска get_packet_asust.exe 
+   
+   Author: Dmitry Demin dmitrydemin1973@gmail.com
+   
+ **.DESCRIPTION**
+
+   Упрощение запуска get_packet_asust.exe, get_packet_asust_exe.bat имеет только один параметр запуска - номер пакета. 
+   
+**.PARAMETER packet**
+
+   Номер пакета АСУ СТ 
+
+**.EXAMPLE**
+
+  Скачивание пакета 14534 и сохранение в директорию D:\Region\updates\2020_11_02\14534\ 
+
+     get_packet_asust_exe.bat 14534
+
+
+# get_packet_asust_ps1.bat
+
+**.SYNOPSIS**
+
+   Упрощение запуска get_packet_asust.ps1
+   
+   Author: Dmitry Demin dmitrydemin1973@gmail.com
+   
+ **.DESCRIPTION**
+
+   Упрощение запуска get_packet_asust.ps1, get_packet_asust_ps1.bat имеет только один параметр запуска - номер пакета. 
+   
+**.PARAMETER packet**
+
+   Номер пакета АСУ СТ 
+
+**.EXAMPLE**
+
+  Скачивание пакета 14534 и сохранение в директорию D:\Region\updates\2020_11_02\14534\ 
+
+     get_packet_asust_ps1.bat 14534
+
 
 # get_packet_asust.exe 
 
