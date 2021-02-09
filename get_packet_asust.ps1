@@ -5,7 +5,7 @@
      Author: Dmitry Demin dmitrydemin1973@gmail.com
 
     .DESCRIPTION
-    Get packet from internal support site, create directory D:\Region\updates\2020_11_02\14534 and zip archive check.
+    Get packet from internal support site, create directory D:\Region\updates\2020_11_02\14534 and zip archive check , unzip to specify directory.
 
     .PARAMETER packet
     Specify the packet for dowload. 
